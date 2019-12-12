@@ -20,6 +20,7 @@ public class ControllerRest extends HttpServlet {
 	private static final long serialVersionUID = 1L;
    	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
    			throws ServletException, IOException {
+   		//Esse é o código do JSON
 	 try {
 		 List<Aluno> resp = new AlunoDao().findAll();
 		 response.getWriter().print(new Gson().toJson(resp));
